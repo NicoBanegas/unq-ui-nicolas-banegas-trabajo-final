@@ -44,19 +44,20 @@ button {
   margin-left: 10px;
 }
 
-.word-bubble-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.word-list-container {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
   margin-top: 20px;
 }
 
-.word-bubble {
-  background: var(--accent);
-  color: white;
-  padding: 8px 15px;
-  border-radius: 20px;
-  font-weight: bold;
+.word-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
 }
 
 @keyframes shake {

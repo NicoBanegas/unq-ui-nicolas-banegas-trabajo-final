@@ -7,16 +7,23 @@ import { Navigate } from 'react-router-dom';
 
 export const GameView = () => {
   const { cadena, puntaje, tiempo, gameOver, mensajeError, agregarPalabra } = useJuego();
+  const ultimaPalabra = cadena.length > 0 ? cadena[cadena.length - 1] : null;
+  const inicialRequerida = ultimaPalabra ? ultimaPalabra.slice(-1).toUpperCase() : null;
 
   if (gameOver) {
-    return <Navigate to="/game-over" state={{ puntaje, palabras: cadena.length }} />;
+    return <Navigate to="/game-over" state={{ puntaje, cadena }} />;
   }
 
   return (
     <div className="game-view">
-      <h1>Encadenadas</h1>
+      <h1>Palabras Encadenadas</h1>
       <Timer tiempo={tiempo} />
       <ScoreBoard puntaje={puntaje} />
+      {inicialRequerida && (
+        <p style={{ fontWeight: 'bold', fontSize: '1.2rem', color: 'var(--primary)' }}>
+          Inicial requerida: {inicialRequerida}
+        </p>
+      )}
       <WordForm onAgregarPalabra={agregarPalabra} shake={!!mensajeError} />
       {mensajeError && <p style={{ color: '#d63031', fontWeight: 'bold' }}>{mensajeError}</p>}
       <WordChain cadena={cadena} />
