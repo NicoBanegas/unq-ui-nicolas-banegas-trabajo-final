@@ -20,12 +20,12 @@ export const GameView = () => {
       <Timer tiempo={tiempo} />
       <ScoreBoard puntaje={puntaje} />
       {inicialRequerida && (
-        <p style={{ fontWeight: 'bold', fontSize: '1.2rem', color: 'var(--primary)' }}>
+        <p className="initial-required">
           Inicial requerida: {inicialRequerida}
         </p>
       )}
       <WordForm onAgregarPalabra={agregarPalabra} shake={!!mensajeError} />
-      {mensajeError && <p style={{ color: '#d63031', fontWeight: 'bold' }}>{mensajeError}</p>}
+      {mensajeError && <p className="error-message">{mensajeError}</p>}
       <WordChain cadena={cadena} />
     </div>
   );

@@ -10,7 +10,7 @@ Juego "Palabras Encadenadas" desarrollado con React y Vite.
 
 1. Clona el repositorio:
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone https://github.com/NicoBanegas/unq-ui-nicolas-banegas-trabajo-final.git
    cd unq-ui-nicolas-banegas-trabajo-final
    ```
 
@@ -26,10 +26,10 @@ Juego "Palabras Encadenadas" desarrollado con React y Vite.
 
 ## Ejecución
 
-Para iniciar el proyecto en modo desarrollo, ejecuta:
+Para iniciar el proyecto, ejecuta:
 
 ```bash
-npm run dev
+npm start
 ```
 
 Esto abrirá la aplicación en tu navegador (por defecto en `http://localhost:5173`).

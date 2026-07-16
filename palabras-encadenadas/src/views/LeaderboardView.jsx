@@ -15,7 +15,7 @@ export const LeaderboardView = () => {
           scores.map((entry, index) => (
             <div key={index} className="word-item">
               <span>{index + 1}. {entry.name}</span>
-              <strong>{entry.score} pts</strong>
+              {entry.score} pts
             </div>
           ))
         )}

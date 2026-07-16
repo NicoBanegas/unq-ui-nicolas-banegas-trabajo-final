@@ -28,9 +28,9 @@ export const GameOverView = () => {
         onChange={(e) => setName(e.target.value)}
         style={{ marginBottom: '10px' }}
       />
-      <button onClick={handleSave}>Guardar puntaje</button>
+      <button onClick={handleSave} className="margin-top-20">Guardar puntaje</button>
       
-      <div className="word-list-container" style={{ marginTop: '20px' }}>
+      <div className="word-list-container margin-top-20">
         <h3>Tu cadena:</h3>
         {cadena.map((word, index) => (
           <div key={index} className="word-item">
