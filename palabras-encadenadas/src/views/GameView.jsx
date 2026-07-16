@@ -14,11 +14,11 @@ export const GameView = () => {
 
   return (
     <div className="game-view">
-      <h1>Juego de Palabras Encadenadas</h1>
+      <h1>Encadenadas</h1>
       <Timer tiempo={tiempo} />
       <ScoreBoard puntaje={puntaje} />
-      <WordForm onAgregarPalabra={agregarPalabra} />
-      {mensajeError && <p style={{ color: 'red' }}>{mensajeError}</p>}
+      <WordForm onAgregarPalabra={agregarPalabra} shake={!!mensajeError} />
+      {mensajeError && <p style={{ color: '#d63031', fontWeight: 'bold' }}>{mensajeError}</p>}
       <WordChain cadena={cadena} />
     </div>
   );

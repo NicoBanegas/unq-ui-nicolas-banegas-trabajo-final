@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export const WordForm = ({ onAgregarPalabra }) => {
+export const WordForm = ({ onAgregarPalabra, shake }) => {
   const [input, setInput] = useState('');
 
   const handleSubmit = (e) => {
@@ -12,7 +12,7 @@ export const WordForm = ({ onAgregarPalabra }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={shake ? 'shake' : ''}>
       <input
         type="text"
         value={input}

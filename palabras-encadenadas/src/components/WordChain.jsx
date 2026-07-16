@@ -1,12 +1,9 @@
 export const WordChain = ({ cadena }) => {
   return (
-    <div className="word-chain">
-      <h3>Cadena de palabras:</h3>
-      <ul>
-        {cadena.map((word, index) => (
-          <li key={index}>{word}</li>
-        ))}
-      </ul>
+    <div className="word-bubble-container">
+      {cadena.map((word, index) => (
+        <span key={index} className="word-bubble">{word}</span>
+      ))}
     </div>
   );
 };
