@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { validarPalabra } from '../services/api.service';
-import { calcularPuntos, esEncadenamientoValido, esPalabraUsada } from '../utils/gameLogic';
+import { calcularPuntos, esCadenaValida, fueUsadaLaPalabra } from '../utils/gameLogic';
 
 export const useJuego = () => {
   const [cadena, setCadena] = useState([]);
@@ -29,12 +29,12 @@ export const useJuego = () => {
   const agregarPalabra = async (palabra) => {
     setMensajeError('');
     
-    if (esPalabraUsada(cadena, palabra)) {
+    if (fueUsadaLaPalabra(cadena, palabra)) {
       setMensajeError('La palabra ya fue utilizada.');
       return;
     }
     
-    if (cadena.length > 0 && !esEncadenamientoValido(cadena[cadena.length - 1], palabra)) {
+    if (cadena.length > 0 && !esCadenaValida(cadena[cadena.length - 1], palabra)) {
       setMensajeError('La palabra no respeta la regla de encadenamiento.');
       return;
     }

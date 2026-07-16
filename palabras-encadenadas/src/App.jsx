@@ -1,10 +1,16 @@
-import { useState } from 'react'
-import './App.css'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { GameView } from './views/GameView';
 
 function App() {
-  return ( 
-    <h1>Hola mundo!</h1>
-   )
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<GameView />} />
+        <Route path="/game-over" element={<h1>Partida Finalizada</h1>} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
