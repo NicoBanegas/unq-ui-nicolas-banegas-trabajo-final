@@ -1,18 +1,21 @@
 :root {
   --primary: #6c5ce7;
   --accent: #fd79a8;
-  --bg: #f0f2f5;
+  --bg: #b3e5fc; 
   --card: #ffffff;
   --text: #2d3436;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: var(--bg);
+  background-size: cover;
+  background-position: center;
   color: var(--text);
   display: flex;
   justify-content: center;
   padding: 20px;
+  min-height: 100vh;
 }
 
 .game-view, .game-over-view {
